@@ -1,0 +1,14 @@
+.DS_Store
+.vscode
+*.swp
+
+# app
+.next
+.yarn
+node_modules
+next-env.d.ts
+
+# functions
+.dev*
+.wrangler
+dev

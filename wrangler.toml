@@ -1,0 +1,6 @@
+name = "draw-neko"
+pages_build_output_dir = ".next/out"
+
+[[r2_buckets]]
+binding = 'nekos'
+bucket_name = 'nekos'
