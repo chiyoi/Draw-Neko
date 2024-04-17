@@ -14,4 +14,5 @@ export const AppLinkProps = z.object({
     blurhash: z.string(),
   }),
 })
+
 export type AppLinkProps = z.infer<typeof AppLinkProps>

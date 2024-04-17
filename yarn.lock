@@ -3430,6 +3430,7 @@ __metadata:
     openai: "npm:^4.35.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    snowyflake: "npm:^2.0.0"
     typescript: "npm:^5.4.5"
     wrangler: "npm:^3.50.0"
     zod: "npm:^3.22.4"
@@ -3516,6 +3517,13 @@ __metadata:
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
   checksum: 10c0/a16775323e1404dd43fabafe7460be13a471e021637bc7889468eb45ce6a6b207261f454e4e530a19500cc962c4cc5348583520843b363f4193cee5c00e1e539
+  languageName: node
+  linkType: hard
+
+"snowyflake@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "snowyflake@npm:2.0.0"
+  checksum: 10c0/96e9ca45d80da84f68b9ec602cf4085d138be1da6e64c71b497131ca61e2ba41191baeaf24c54176f853e43ef753080d78fa34ac2bdd9930c6d6f7f218a75619
   languageName: node
   linkType: hard
 

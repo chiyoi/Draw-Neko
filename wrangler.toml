@@ -4,3 +4,7 @@ pages_build_output_dir = ".next/out"
 [[r2_buckets]]
 binding = 'nekos'
 bucket_name = 'nekos'
+
+[[r2_buckets]]
+binding = 'assets'
+bucket_name = 'assets'

@@ -1,9 +1,6 @@
-import { Ai } from '@cloudflare/ai'
-
-export type Environments = {
+export type Env = {
   OPENAI_API_KEY: string,
   STABILITY_API_KEY: string,
-  // AI: Ai,
   nekos: R2Bucket,
-  test: R2Bucket,
+  assets: R2Bucket,
 }

@@ -5,6 +5,7 @@ const HachiMaruPop = Hachi_Maru_Pop({
   display: 'swap',
   weight: '400',
 })
+
 export const FontHachiMaruPop = HachiMaruPop.style
 
 const NotoSansMono = Noto_Sans_Mono({
@@ -12,4 +13,5 @@ const NotoSansMono = Noto_Sans_Mono({
   display: 'swap',
   weight: '400',
 })
+
 export const FontNotoSansMono = NotoSansMono.style

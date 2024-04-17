@@ -10,7 +10,7 @@ import { z } from 'zod'
 export default () => {
   const [traits, setTraits] = useState('')
   const [image, setImage] = useState<string>()
-  const { mutate, error, isIdle, isSuccess } = useMutation({
+  const { mutate, error, isIdle, isError, isSuccess } = useMutation({
     mutationFn: async () => {
       const response = await fetch('/new', {
         method: 'POST',
@@ -25,7 +25,7 @@ export default () => {
     }
   })
 
-  if (error !== null) return (
+  if (isError) return (
     <>
       <Text as='div'>Something bad happened, refresh the page might help.</Text>
       <Text mt='3' as='div'>Error message: {error.message}</Text>
@@ -35,13 +35,13 @@ export default () => {
     <>
       <Heading style={FontNotoSansMono}>Draw Neko</Heading>
       <Text mt='3' as='div' size='1' color='gray'>
-        How do you want your cat be like?
+        How do you want your cat girl be like?
       </Text>
       <TextArea mt='3' placeholder='She has long hair...' value={traits} onChange={e => (
         setTraits(e.target.value)
       )} style={FontNotoSansMono} />
       <Flex mt='3' align='center' justify='end'>
-        <Button variant='soft' disabled={!isIdle} onClick={() => mutate()} style={FontNotoSansMono}>
+        <Button variant='soft' disabled={!isIdle && !isSuccess} onClick={() => mutate()} style={FontNotoSansMono}>
           Draw!
         </Button>
       </Flex>

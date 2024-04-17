@@ -1,5 +1,5 @@
-import { Environments } from './common/env'
+import { Env } from './common/env'
 
-export const onRequest: PagesFunction<Environments> = async ({ env }) => {
+export const onRequest: PagesFunction<Env> = async ({ env }) => {
   return new Response("Pong!")
 }

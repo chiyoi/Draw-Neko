@@ -1,8 +1,8 @@
 import { error, json } from 'itty-router'
 
-import { Environments } from '../common/env'
+import { Env } from '../common/env'
 
-export const onRequestGet: PagesFunction<Environments> = async ({ env, params }) => {
+export const onRequestGet: PagesFunction<Env> = async ({ env, params }) => {
   const { id } = params
   const { nekos } = env
   if (typeof id !== 'string') return error(400)
@@ -15,7 +15,7 @@ export const onRequestGet: PagesFunction<Environments> = async ({ env, params })
   return new Response(item.body, { headers })
 }
 
-export const onRequestDelete: PagesFunction<Environments> = async ({ env, params }) => {
+export const onRequestDelete: PagesFunction<Env> = async ({ env, params }) => {
   const { id } = params
   const { nekos } = env
   if (typeof id !== 'string') return error(400)
