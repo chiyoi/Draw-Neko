@@ -13,12 +13,13 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const { traits } = NekoNewRequest.parse(await request.json())
   const prompt = await revise(env, `A cute anime cat girl, here is her traits: ${traits}`)
   if (prompt === null) return error(500, 'Revise prompt failed.')
+  console.info(`Revised prompt: ${prompt}`)
   const image = await textToImage(engineID, env, {
     text_prompts: [{ text: prompt }],
     width: 1024,
     height: 1024,
   })
-  const id = new Snowyflake({ workerId: 1n, epoch: Epoch.Twitter }).nextId()
+  const id = `${new Snowyflake({ workerId: 1n, epoch: Epoch.Twitter }).nextId()}`
   const key = `${id}.png`
   await nekos.put(key, image)
   return json({
